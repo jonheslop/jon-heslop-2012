@@ -1,0 +1,66 @@
+body { color: #444; font-family: "courier new", monospace; font-weight: 300; }
+a:link, a:visited { position: relative; text-decoration: none; color: #F43D3E; border-bottom: 1px solid transparent; -webkit-transition: color,background-color,border-bottom .3s,.3s,.3s ease-out,ease-out,ease-out; 0,0,.3s }
+a:hover { border-bottom-color: #F43D3E; background: #E6E6E6; }
+a:active { top: 1px; }
+abbr { cursor: help; }
+.smallcaps { font-variant: small-caps; font-size: 1em; letter-spacing: 1px; }
+
+header[role="banner"] { position: fixed; top: 0; width: 100%; z-index: 999; background-color: rgba(248,248,248,.9); border-bottom: 2px solid rgba(240,240,240,.9); box-shadow: 0 2px 12px #fff; }
+header[role="banner"].dark { box-shadow: none; background-color: rgba(248,248,248,.3); border-bottom: 2px solid rgba(240,240,240,.2); }
+header[role="banner"] hgroup { position: relative; z-index: 9999; float: left; }
+header[role="banner"] hgroup h1 { font-size: 1em; margin: 0 auto; }
+header[role="banner"] hgroup h1 a { display: block; background: url("../img/jfh-logo-500px.png") 0 0 no-repeat; background-size: 100%; text-indent: -9999px; width: 100%; height: 0; padding-bottom: 100%; margin: 0; border-bottom: none!important; }
+#links li a { display: block; text-indent: 9999px; width: 24px; height: 24px; background-image: url(../img/icon-sprite.png); background-repeat: no-repeat; background-size: 100%; border-bottom: none; background-color: transparent; }
+#links li a:hover { opacity: .8; }
+.twitter a { background-position: 0 -51px; }
+.email a { background-position: 0 -27px; }
+
+#main { margin-top: 2em; }
+
+#intro { margin: 6em 0 0; }
+#intro h2 { letter-spacing: 8px; font-size: 4em; margin: .25em 0 0; }
+#intro h2 span { background-color: #F43D3E; color: #fff; line-height: 1.5; padding: 0 0 0 .2em; }
+#intro h3 { font-size: 1.125em; }
+
+h2 { -webkit-font-smoothing: antialiased; }
+.website { padding: 3em 0; border-top: 2px solid #F0F0F0; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; }
+.website h2 { margin-top: 0; }
+.website:first-child { border-top: none; padding-top: 6em; }
+.screen { display: none; }
+.screen.active { display: block; cursor: pointer; }
+
+.screensNav { text-align: center;}
+.screensNav a { background-color: transparent; border-bottom: none; color: #d1d1d1; -webkit-transition: color .3s ease-out; }
+.screensNav a.active { color: #F43D3E; }
+
+figure { background-color: rgba(248,248,248,.9); padding-top: .75em!important; }
+figcaption { margin-top: .75em; }
+figcaption p { font-size: .6875em; text-transform: uppercase; }
+
+.description p { margin-bottom: 2em; color:rgba(57,32,79,.7)  }
+
+footer[role="contentinfo"] { z-index: 0; }
+#aboutToggle { width: 100%; position: fixed; bottom: 0; border-bottom: 2px solid #F43D3E; text-align: right; }
+#aboutToggle a { background-color: #F43D3E; padding: .25em .5em .15em; color: #fff; font-weight: normal; text-transform: uppercase; letter-spacing: 2px; margin-right: 6.333333%; -webkit-border-top-left-radius: 2px; -webkit-border-top-right-radius: 2px; -moz-border-radius-topleft: 2px; -moz-border-radius-topright: 2px; border-top-left-radius: 2px; border-top-right-radius: 2px; }
+.about #about { display: block!important; }
+#about { z-index: 10; display: none; padding-top: .75em; margin-top: 8em; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; }
+#about p, #about aside { margin-bottom: .75em;  }
+#closeToggle { display: none; }
+
+/* 
+http://nicolasgallagher.com/micro-clearfix-hack/
+For modern browsers */
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+
+.cf:after {
+    clear:both;
+}
+<!--[if IE 6]>
+/* For IE 6/7 (trigger hasLayout) */
+.cf {
+    zoom:1;
+}

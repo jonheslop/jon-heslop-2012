@@ -1,0 +1,248 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Jon Heslop &raquo; Portfolio</title>
+	<meta name="description" content="">
+	<meta name="author" content="Jon Heslop">
+	
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<!-- CSS concatenated and minified via ant build script-->
+	<link rel="stylesheet" href="/style.css">
+	<!-- end CSS-->
+	
+	<script src="/js/libs/modernizr.min.js"></script>
+	<script>
+	var birthDateStr = '19870620',
+	    parts = birthDateStr.match(/(\d{4})(\d{2})(\d{2})/),
+	    dateObj = new Date(parts[1], parts[2]-1, parts[3]); // months go 0-11!
+	
+	getAge(dateObj);
+	
+	function getAge(birthDate) {
+	  var now = new Date();
+	
+	  function isLeap(year) {
+	    return year % 4 == 0 && (year % 100 != 0 || year % 400 == 0);
+	  }
+	
+	  // days since the birthdate    
+	  var days = Math.floor((now.getTime() - birthDate.getTime())/1000/60/60/24);
+	  var age = 0;
+	  // iterate the years
+	  for (var y = birthDate.getFullYear(); y <= now.getFullYear(); y++){
+	    var daysInYear = isLeap(y) ? 366 : 365;
+	    if (days >= daysInYear){
+	      days -= daysInYear;
+	      age++;
+	      // increment the age only if there are available enough days for the year.
+	    }
+	  }
+	  return age;
+	}
+	// Thanks to log.pile.com for this badboy:
+       function email(user, domain) {
+    	    locationstring = 'mailto:' + user + '@' + domain;
+    	    window.location = locationstring;
+    }
+	</script>
+</head>
+
+<body>
+	<header role="banner" class="cf">
+	    <div class="container">
+	    	<hgroup class="wrapper">
+	    		<h1><a href="/">Jon Heslop&rsquo;s Portfolio</a></h1>
+	    	</hgroup>
+    		<ul id="links" class="wrapper">
+    			<li class="twitter"><a href="http://twitter.com/jonheslop">Twitter</a></li>
+    			<li class="dribbble"><a href="http://dribbble.com/jonheslop">Dribbble</a></li>
+    			<li class="email"><a href="mailto:jon@jonheslop.com">Email</a></li>
+    		</ul>
+    </div>
+	</header>
+	<div id="main" role="main">
+	    <article id="blackcloset" class="website container cf">
+	    	<figure class="wrapper">
+	    		<div class="screens cf">
+	    			<img class="screen" src="/img/screenshots/do-book-co-1.jpg" alt="The Do Book Co. resizing responsively" />
+	    			<img class="screen" src="/img/screenshots/do-book-co-2.jpg" alt="The Do Book Co. home page" />
+	    			<img class="screen" src="/img/screenshots/do-book-co-3.jpg" alt="The Do Book Co. product index" />
+	    			<img class="screen" src="/img/screenshots/do-book-co-4.jpg" alt="The Do Book Co. product page overlay" />
+	    			<img class="screen" src="/img/screenshots/do-book-co-5.jpg" alt="The Do Book Co. cart page" />
+	    		</div>
+	    		<figcaption>
+	    			<p class="caption"></p>
+	    		</figcaption>
+	    	</figure>
+	    	<div class="description wrapper">
+	    		<header>
+	    			<h2>The Do Book Co. and</h2>
+	    		</header>
+	    		<p>The Do Book Co. is a publishing offshoot of the Do Lectures, producing a series of inspirational pocket guidebooks in both print and digital. The website is powered by <a href="http:/shopify.com" title="Shopify E-commerce Package">Shopify</a> and uses the wonderful <a href="http://stripe.com" title="Stripe">Stripe</a> as a payment&nbsp;gateway. I used <abbr class="smallcaps" title="Asynchronous JavaScript and XML">AJAX</abbr> to smooth out the add to cart process.</p>
+	    		<p>It&rsquo;s also fully responsive adapting fluidly to any device&nbsp;width.</p> 
+	    		<p class="visit"><a href="http://thedobook.co">Visit website&nbsp;&raquo;</a></p>
+	    	</div>
+	    </article>
+	    <article id="bless" class="website container cf">
+	    	<figure class="wrapper">
+	    		<div class="screens cf">
+	    			<img class="screen" src="/img/screenshots/bless-4.jpg" alt="Bless Homepage resizing responsively" />
+	    			<img class="screen" src="/img/screenshots/bless-1.jpg" alt="Bless homepage" />
+	    			<img class="screen" src="/img/screenshots/bless-2.jpg" alt="Bless about page" />
+	    			<img class="screen" src="/img/screenshots/bless-3.jpg" alt="Bless events page" />
+	    		</div>
+	    		<figcaption>
+	    			<p class="caption"></p>
+	    		</figcaption>
+	    	</figure>
+	    	<div class="description wrapper">
+	    		<header>
+	    			<h2>Bless</h2>
+	    		</header>
+	    		<p>My good friends at Bless needed a new website to help explain what they do and how people can get involved. The website is powered by <a href="http://wordpress.org" title="Wordpress CMS">Wordpress</a> and is fully responsive so it looks great whether you are on your iPhone or (if you&rsquo;re lucky) your 27"&nbsp;monitor.</p>
+	    		<p class="visit"><a href="http://blessnet.eu">Visit website&nbsp;&raquo;</a></p>
+	    	</div>
+	    </article>
+	    <article id="hiutdenim" class="website container cf">
+	    	<figure class="wrapper">
+	    		<div class="screens cf">
+	    			<img class="screen" src="/img/screenshots/hiutdenim-1.jpg" alt="Hiut Denim homepage" />
+	    		</div>
+	    		<figcaption>
+	    			<p class="caption"></p>
+	    		</figcaption>
+	    	</figure>
+	    	<div class="description wrapper">
+	    		<header>
+	    			<h2>Hiut Denim</h2>
+	    		</header>
+	    		<p>Working as a project manager with the excellent, Penarth based, <a href="http://markboultondesign.co.uk">Mark Boulton Design</a> we produced the current iteration of the Hiut Denim site. Much more than a simple storefront the website puts emphasis on Hiut Denim&rsquo;s story of getting a town to make jeans&nbsp;again.</p>
+	    		<p>Powered by <a href="http:/shopify.com" title="Shopify E-commerce Package">Shopify</a> the site guides you through selecting a pair of jeans, making it clear how special each pair made&nbsp;is.</p>
+	    		<p class="visit"><a href="http://hiutdenim.co.uk">Visit website&nbsp;&raquo;</a></p>
+	    	</div>
+	    </article>
+	    <article id="historytag" class="website container cf">
+	    	<figure class="wrapper">
+	    		<div class="screens cf">
+	    			<img class="screen" src="/img/screenshots/historytag-1.jpg" alt="History Tag Homepage" />
+	    		</div>
+	    		<figcaption>
+	    			<p class="caption"></p>
+	    		</figcaption>
+	    	</figure>
+	    	<div class="description wrapper">
+	    		<header>
+	    			<h2>HistoryTag</h2>
+	    		</header>
+	    		<p>When David &amp; Clare first started thinking about Hiut Denim, they came up with the concept for HistoryTag, a system for embedding history into jeans. Together we spent a year mulling over the concept, developing it and working how it could practically&nbsp;work.</p>
+	    		<p>To bring the idea to life we partnered with the masterful <a href="http://riglondon.com"><abbr class="smallcaps" title="Really Interesting Group">RIG</abbr></a> who made HistoryTag into an actual thing. It&rsquo;s an iPhone app that each of Hiut Denim machinists use to record the jeans making process and then the history is passed onto the user who can use the website to connect their twitter/flickr/instagram to carry their jeans to enable the record to&nbsp;continue.</p>
+	    		<p class="visit"><a href="http://historytag.com">Visit website&nbsp;&raquo;</a></p>
+	    	</div>
+	    </article>
+	    <article id="dolectures" class="website container cf">
+	    	<figure class="wrapper">
+	    		<div class="screens cf">
+	    			<img class="screen" src="/img/screenshots/dolectures-1.jpg" alt="Do Lectures Homepage" />
+	    		</div>
+	    		<figcaption>
+	    			<p class="caption"></p>
+	    		</figcaption>
+	    	</figure>
+	    	<div class="description wrapper">
+	    		<header>
+	    			<h2>Do Lectures</h2>
+	    		</header>
+	    		<p>As a member of the Do Lectures team, I worked with the super talented Texan trio, <a href="http://paravelinc.com">Paravel</a> and the ever awesome <a href="http://frankchimero.com">Frank Chimero</a> to produce the current website.</p>
+	    		<p>As a kind of project manager I liaised with the Do Lectures team and Para-Frank from conception to deployment. Keeping things on schedule and setting up all the complicated <abbr class="smallcaps" title="Content Delivery Network">CDN</abbr> stuff to handle delivery of well over 100 lectures to the sites 3000 daily&nbsp;visitors.</p>
+	    		<p>The website was nominated for site of the year awards by .Net Magazine and was <abbr title="I&rsquo;m 98% certain">probably</abbr> the first fully responsive video website on the&nbsp;internet.</p>
+	    		<p class="visit"><a href="http://thedolectures.co.uk">Visit website&nbsp;&raquo;</a></p>
+	    	</div>
+	    </article>
+	    <article id="kindling" class="website container cf">
+	    	<figure class="wrapper">
+	    		<div class="screens cf">
+	    			<img class="screen" src="/img/screenshots/kindling-1.jpg" alt="Kindling email template" />
+	    			<img class="screen" src="/img/screenshots/kindling-2.jpg" alt="Kindling email template" />
+	    			<img class="screen" src="/img/screenshots/kindling-3.jpg" alt="Kindling email template" />
+	    		</div>
+	    		<figcaption>
+	    			<p class="caption"></p>
+	    		</figcaption>
+	    	</figure>
+	    	<div class="description wrapper">
+	    		<header>
+	    			<h2>Kindling</h2>
+	    		</header>
+	    		<p>After completing the <a href="#dolectures">aforementioned Do Lectures redesign</a> with Para-Frank we launched a weekly newsletter called Kindling. The idea being that it was a round up of the best content we&rsquo;d found (and tweeted about) that week, the newsletter quantifies the time each link will take you to read/watch and also includes a handy Read Later link for <a href="http://instapaper.com">Instapaper</a>&nbsp;users.</p>
+	    		<p>I extrapolated the design from that of the website. The newsletter is delivered via <a href="http://mailchimp.com">MailChimp</a>, using their powerful templating system Do Lectures staff can whip the newsletter together in a jiffy using repeatable blocks and formatted text&nbsp;fields.</p>
+	    	</div>
+	    </article>
+	    <article id="monkstoneknitwear" class="website container cf">
+	    	<figure class="wrapper">
+	    		<div class="screens cf">
+	    			<img class="screen" src="/img/screenshots/monkstone-1.jpg" alt="Monkstone product page" />
+	    			<img class="screen" src="/img/screenshots/monkstone-2.jpg" alt="Monkstone product index" />
+	    			<img class="screen" src="/img/screenshots/monkstone-3.jpg" alt="Monkstone blog index" />
+	    			<img class="screen" src="/img/screenshots/monkstone-4.jpg" alt="Monkstone blog post" />
+	    		</div>
+	    		<figcaption>
+	    			<p class="caption"></p>
+	    		</figcaption>
+	    	</figure>
+	    	<div class="description wrapper">
+	    		<header>
+	    			<h2>Monkstone Knitwear</h2>
+	    		</header>
+	    		<p>Monkstone Knitwear makes limited runs of high quality knitted products. They&rsquo;re based in West Wales and all their wool comes from the area and is even manufactured locally&nbsp;too.</p>
+	    		<p>The website is powered by <a href="http://shopify.com" title="Shopify E-commerce Package">Shopify</a>, an awesome e-commerce platform that takes care of all the stuff that&rsquo;s complicated about online shops. It&rsquo;s a fully responsive website making purchasing just as easy whether on a phone or at a&nbsp;desk.</p>
+	    		<p class="visit"><a href="http://monkstoneknitwear.co.uk">Visit website&nbsp;&raquo;</a></p>
+	    	</div>
+	    </article>
+	</div>
+	<h4 id="aboutToggle"><a id="aboutToggleLink" href="/about">About</a><a id="closeToggle" href="/">Back</a></h4>
+	<footer role="contentinfo" class="container cf">
+		<div id="about" class="wrapper">
+			<p>Jon Heslop is a web designer working at <a href="http://www.rapha.cc">Rapha</a>, previously he worked with the people behind <a href="http://hiut.co.uk" title="Hiut Denim Co.">Hiut Denim Co.</a>, <a href="http://thedobook.co">The Do Book Co.</a> and <a href="http://thedolectures.co.uk" title="The Do Lectures">The Do Lectures</a>. He spends his weekends roaming the city with friends, riding his <a href="https://www.strava.com/athletes/2108704">bike</a> and doing <abbr title="Do It Yourself">DIY</abbr> botch jobs.</p>
+			<p>Jon interacts with others using <a href="http://twitter.com/jonheslop">Twitter</a>, keeps a <a href="http://www.tapwaterplease.co.uk/">Tumblr</a>, <a href="http://gimmebar.com/loves/jonheslop">GimmeBar</a> and <a href="https://verygoods.co/jonheslop">Very Goods</a> of interesting things he finds. He makes a habit of listening to <a href="http://www.last.fm/user/jonheslop">music</a> all the time. He loves sitting back and catching up on his <a href="http://www.instapaper.com/starred/rss/503291/OH1asbL6WaV10Kr5CkPxqUJlTM" title="Instapaper liked items">instapaper</a> or reading a good book.
+			<p>Jon is <script type="text/javascript">document.write(getAge(dateObj));</script> years old and is currently living in London. He began life in London, grew up on the Wirral and later the Midlands. You can <a href="javascript:email('jon', 'jonheslop.com?subject=Hello')">email him</a> if&nbsp;you like.</p>
+			<aside>Photograph by <a href="http://jonathancherry.net">Jonathan Cherry</a></aside>
+		</div>
+	</footer>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+
+	<!-- Here's Golden Gridlet, the grid overlay script. -->
+	<!-- <script src="/js/GGS.js"></script> -->
+
+	<!-- scripts concatenated and minified via ant build script-->
+	<script defer src="/js/jquery.workplugins.min.js"></script>
+	<!-- end scripts-->
+		
+	<!--[if lt IE 7 ]>
+	  <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+	  <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+	<![endif]-->
+
+	<!-- Google Anayltics, natch -->	
+	<script type="text/javascript">
+	
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-5030361-1']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Jon Heslop</title>
+	<meta name="description" content="Nomadic, freelance web designer">
+	<meta name="author" content="Jon Heslop">
+  <link rel="shortcut icon" href="favicon.ico">
+	
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<!-- CSS concatenated and minified via ant build script-->
+	<link rel="stylesheet" href="/style.css">
+	<!-- end CSS-->
+	
+	<script src="/js/libs/modernizr.min.js"></script>
+	<script>
+	var birthDateStr = '19870620',
+	    parts = birthDateStr.match(/(\d{4})(\d{2})(\d{2})/),
+	    dateObj = new Date(parts[1], parts[2]-1, parts[3]); // months go 0-11!
+	
+	getAge(dateObj);
+	
+	function getAge(birthDate) {
+	  var now = new Date();
+	
+	  function isLeap(year) {
+	    return year % 4 == 0 && (year % 100 != 0 || year % 400 == 0);
+	  }
+	
+	  // days since the birthdate    
+	  var days = Math.floor((now.getTime() - birthDate.getTime())/1000/60/60/24);
+	  var age = 0;
+	  // iterate the years
+	  for (var y = birthDate.getFullYear(); y <= now.getFullYear(); y++){
+	    var daysInYear = isLeap(y) ? 366 : 365;
+	    if (days >= daysInYear){
+	      days -= daysInYear;
+	      age++;
+	      // increment the age only if there are available enough days for the year.
+	    }
+	  }
+	  return age;
+	}
+	// Thanks to log.pile.com for this badboy:
+       function email(user, domain) {
+    	    locationstring = 'mailto:' + user + '@' + domain;
+    	    window.location = locationstring;
+    }
+    // Thanks to http://rog.ie/post/9089341529/html5boilerplatejs for the tip
+	var b = document.documentElement;
+  	b.setAttribute('data-useragent',  navigator.userAgent);
+  	b.setAttribute('data-platform', navigator.platform );
+	</script>
+</head>
+
+<body class="home">
+	<header role="banner" class="cf">
+	    <div class="container">
+	    	<hgroup class="wrapper">
+	    		<h1><a href="/" id="logo">Jon Heslop&rsquo;s Portfolio</a></h1>
+	    	</hgroup>
+    		<ul id="links" class="wrapper">
+    			<li class="twitter"><a href="http://twitter.com/jonheslop">Twitter</a></li>
+    			<li class="email"><a href="javascript:email('jon', 'jonheslop.com?subject=Hello')" target="_blank">Email</a></li>
+    		</ul>
+	    </div>
+	</header>
+	<div id="main" role="main" class="container cf">
+		<header id="intro" class="wrapper">
+			<h2 class="large"><a href="/about">I&nbsp;make&nbsp;things for&nbsp;the&nbsp;internet&hellip;</a></h2>
+			<h2 class="small"><a href="/about">I&nbsp;make things&nbsp;for the&nbsp;internet&hellip;</a></h2>
+			<h3><a href="/portfolio">Y&rsquo;know, like websites&nbsp;&amp;&nbsp;stuff&nbsp;&raquo;</a></h3>
+		</header>
+	</div>
+	<h4 id="aboutToggle"><a id="aboutToggleLink" href="/about">About</a><a id="closeToggle" href="/">Back</a></h4>
+	<footer role="contentinfo" class="container cf">
+		<div id="about" class="wrapper">
+			<p>Jon Heslop is a web designer working at <a href="http://www.rapha.cc">Rapha</a>, previously he worked with the people behind <a href="http://hiut.co.uk" title="Hiut Denim Co.">Hiut Denim</a>, <a href="http://thedobook.co">The Do Book Co.</a> and <a href="http://thedolectures.co.uk" title="The Do Lectures">The Do Lectures</a>. He spends his weekends roaming the city with friends, riding his <a href="https://www.strava.com/athletes/2108704">bike</a> and doing <abbr title="Do It Yourself">DIY</abbr> botch jobs.</p>
+			<p>Jon interacts with others using <a href="http://twitter.com/jonheslop">Twitter</a>, keeps a <a href="http://www.tapwaterplease.co.uk/">Tumblr</a>, <a href="http://gimmebar.com/loves/jonheslop">GimmeBar</a> and <a href="https://verygoods.co/jonheslop">Very Goods</a> of interesting things he finds. He makes a habit of listening to <a href="http://www.last.fm/user/jonheslop">music</a> all the time. He loves sitting back and catching up on his <a href="http://www.instapaper.com/starred/rss/503291/OH1asbL6WaV10Kr5CkPxqUJlTM" title="Instapaper liked items">instapaper</a> or reading a good book.
+			<p>Jon is <script type="text/javascript">document.write(getAge(dateObj));</script> years old and is currently living in London. He began life in London, grew up on the Wirral and later the Midlands. You can <a href="javascript:email('jon', 'jonheslop.com?subject=Hello')">email him</a> if&nbsp;you like.</p>
+			<aside>Photograph by <a href="http://jonathancherry.net">Jonathan Cherry</a></aside>
+		</div>
+	</footer>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+
+	<!-- Here's Golden Gridlet, the grid overlay script. -->
+	<!-- <script src="/js/GGS.js"></script> -->
+
+	<!-- scripts concatenated and minified via ant build script-->
+	<script defer src="/js/jquery.homeplugins.min.js"></script>
+	<!-- end scripts-->
+		
+	<!--[if lt IE 7 ]>
+	  <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+	  <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+	<![endif]-->
+
+</body>
+</html>
