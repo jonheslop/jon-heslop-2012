@@ -19,33 +19,6 @@
 	
 	<script src="/js/libs/modernizr.min.js"></script>
 	<script>
-	var birthDateStr = '19870620',
-	    parts = birthDateStr.match(/(\d{4})(\d{2})(\d{2})/),
-	    dateObj = new Date(parts[1], parts[2]-1, parts[3]); // months go 0-11!
-	
-	getAge(dateObj);
-	
-	function getAge(birthDate) {
-	  var now = new Date();
-	
-	  function isLeap(year) {
-	    return year % 4 == 0 && (year % 100 != 0 || year % 400 == 0);
-	  }
-	
-	  // days since the birthdate    
-	  var days = Math.floor((now.getTime() - birthDate.getTime())/1000/60/60/24);
-	  var age = 0;
-	  // iterate the years
-	  for (var y = birthDate.getFullYear(); y <= now.getFullYear(); y++){
-	    var daysInYear = isLeap(y) ? 366 : 365;
-	    if (days >= daysInYear){
-	      days -= daysInYear;
-	      age++;
-	      // increment the age only if there are available enough days for the year.
-	    }
-	  }
-	  return age;
-	}
 	// Thanks to log.pile.com for this badboy:
        function email(user, domain) {
     	    locationstring = 'mailto:' + user + '@' + domain;
@@ -82,7 +55,7 @@
 		<div id="about" class="wrapper">
 			<p>Jon Heslop is a web designer working at <a href="http://www.rapha.cc">Rapha</a>, previously he worked with the people behind <a href="http://hiut.co.uk" title="Hiut Denim Co.">Hiut Denim</a>, <a href="http://thedobook.co">The Do Book Co.</a> and <a href="http://thedolectures.co.uk" title="The Do Lectures">The Do Lectures</a>. He spends his weekends roaming the city with friends, riding his <a href="https://www.strava.com/athletes/2108704">bike</a> and doing <abbr title="Do It Yourself">DIY</abbr> botch jobs.</p>
 			<p>Jon interacts with others using <a href="http://twitter.com/jonheslop">Twitter</a>, keeps a <a href="http://www.tapwaterplease.co.uk/">Tumblr</a>, <a href="http://gimmebar.com/loves/jonheslop">GimmeBar</a> and <a href="https://verygoods.co/jonheslop">Very Goods</a> of interesting things he finds. He makes a habit of listening to <a href="http://www.last.fm/user/jonheslop">music</a> all the time. He loves sitting back and catching up on his <a href="http://www.instapaper.com/starred/rss/503291/OH1asbL6WaV10Kr5CkPxqUJlTM" title="Instapaper liked items">instapaper</a> or reading a good book.
-			<p>Jon is <script type="text/javascript">document.write(getAge(dateObj));</script> years old and is currently living in London. He began life in London, grew up on the Wirral and later the Midlands. You can <a href="javascript:email('jon', 'jonheslop.com?subject=Hello')">email him</a> if&nbsp;you like.</p>
+			<p>Jon is 25 years old and is currently living in London. He began life in London, grew up on the Wirral and later the Midlands. You can <a href="javascript:email('jon', 'jonheslop.com?subject=Hello')">email him</a> if&nbsp;you like.</p>
 			<aside>Photograph by <a href="http://jonathancherry.net">Jonathan Cherry</a></aside>
 		</div>
 	</footer>
